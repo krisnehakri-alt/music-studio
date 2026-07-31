@@ -249,7 +249,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 150);
   }
 
-  // ── 3. Dismiss Splash Screen ──
+  // ── 3. Floating Music Notes ──
+  const noteContainer = document.createElement('div');
+  noteContainer.className = 'splash-music-notes';
+  splash.appendChild(noteContainer);
+
+  const noteSymbols = ['🎵', '🎶', '🎼', '🎧', '🎸', '🎹', '✨'];
+  for (let i = 0; i < 14; i++) {
+    const note = document.createElement('span');
+    note.className = 'splash-note';
+    note.textContent = noteSymbols[Math.floor(Math.random() * noteSymbols.length)];
+    note.style.left = `${Math.random() * 90 + 5}%`;
+    note.style.top = `${Math.random() * 80 + 10}%`;
+    note.style.animationDelay = `${(Math.random() * 1.5).toFixed(2)}s`;
+    note.style.animationDuration = `${(Math.random() * 1.5 + 2).toFixed(2)}s`;
+    noteContainer.appendChild(note);
+  }
+
+  // ── 4. Dismiss Splash Screen Automatically after 2 Seconds ──
   let dismissed = false;
   const dismissSplash = () => {
     if (dismissed) return;
@@ -258,7 +275,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.style.overflow = '';
     setTimeout(() => {
       splash.style.display = 'none';
-    }, 900);
+    }, 800);
   };
 
   // Start progress bar animation
@@ -268,10 +285,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Auto transition after 4.5 seconds
-  const timer = setTimeout(dismissSplash, 4500);
+  // Auto transition after exactly 2 seconds (2000ms)
+  const timer = setTimeout(dismissSplash, 2000);
 
-  // Manual Enter click
+  // Manual Enter click if user clicks earlier
   if (enterBtn) {
     enterBtn.addEventListener('click', () => {
       clearTimeout(timer);

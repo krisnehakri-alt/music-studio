@@ -848,8 +848,31 @@ body::after {
 .splash-progress-bar {
   height: 100%;
   width: 0%;
-  background: linear-gradient(90deg, var(--accent-purple), var(--accent-gold));
-  box-shadow: 0 0 10px var(--accent-purple-light);
-  transition: width 4.5s linear;
+  background: linear-gradient(90deg, var(--accent-purple), #ec4899, var(--accent-gold));
+  box-shadow: 0 0 14px var(--accent-purple-light);
+  transition: width 2s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.splash-music-notes {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.splash-note {
+  position: absolute;
+  font-size: 1.8rem;
+  color: rgba(251, 191, 36, 0.7);
+  text-shadow: 0 0 12px rgba(139, 92, 246, 0.8);
+  animation: floatMusicNote 3s ease-in-out infinite;
+}
+
+@keyframes floatMusicNote {
+  0% { transform: translateY(20px) rotate(0deg) scale(0.8); opacity: 0; }
+  50% { opacity: 0.9; }
+  100% { transform: translateY(-80px) rotate(25deg) scale(1.2); opacity: 0; }
+}
+
 

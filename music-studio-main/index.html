@@ -13,11 +13,31 @@
 </head>
 <body>
 
+<!-- ── Fullscreen Intro Splash Screen ── -->
+<div id="splashScreen" class="splash-screen">
+  <canvas id="splashCanvas" class="splash-canvas"></canvas>
+  <div class="splash-content">
+    <div class="splash-badge">✦ Welcome to Wokl Music Studio</div>
+    <div class="splash-logo-wrapper">
+      <div class="splash-logo-glow"></div>
+      <img src="images/logo.png" alt="WOKL Music Studio Logo" class="splash-logo-img">
+    </div>
+    <div class="splash-tagline">RECORD • CREATE • INSPIRE</div>
+    <div class="splash-visualizer"></div>
+    <button id="splashEnterBtn" class="splash-enter-btn">
+      Enter Studio <span>➔</span>
+    </button>
+  </div>
+  <div class="splash-progress-track">
+    <div id="splashProgressBar" class="splash-progress-bar"></div>
+  </div>
+</div>
+
 <!-- ── Navbar ── -->
 <nav class="navbar" id="navbar">
   <div class="nav-container">
     <a href="index.html" class="nav-logo">
-      <div class="logo-icon">🎵</div>
+      <img src="images/logo.png" alt="Wokl Music Studio Logo" class="nav-logo-img">
       <div class="logo-text">
         <span class="logo-name">Wokl</span>
         <span class="logo-sub">Music Studio</span>
@@ -291,7 +311,7 @@
   <div class="footer-grid">
     <div class="footer-brand">
       <a href="index.html" class="nav-logo" style="display:inline-flex;">
-        <div class="logo-icon">🎵</div>
+        <img src="images/logo.png" alt="Wokl Music Studio Logo" class="nav-logo-img">
         <div class="logo-text">
           <span class="logo-name">Wokl</span>
           <span class="logo-sub">Music Studio</span>

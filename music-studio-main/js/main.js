@@ -169,3 +169,114 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
+
+// ── Splash Screen Controller ──
+document.addEventListener('DOMContentLoaded', () => {
+  const splash = document.getElementById('splashScreen');
+  if (!splash) return;
+
+  const enterBtn = document.getElementById('splashEnterBtn');
+  const progressBar = document.getElementById('splashProgressBar');
+  const canvas = document.getElementById('splashCanvas');
+
+  // Lock scrolling while splash is active
+  document.body.style.overflow = 'hidden';
+
+  // ── 1. Particle & Wave Canvas Animation ──
+  if (canvas) {
+    const ctx = canvas.getContext('2d');
+    let width = (canvas.width = window.innerWidth);
+    let height = (canvas.height = window.innerHeight);
+
+    window.addEventListener('resize', () => {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+    });
+
+    const particles = Array.from({ length: 45 }, () => ({
+      x: Math.random() * width,
+      y: Math.random() * height,
+      radius: Math.random() * 2.5 + 1,
+      vx: (Math.random() - 0.5) * 0.6,
+      vy: (Math.random() - 0.5) * 0.6,
+      color: Math.random() > 0.5 ? 'rgba(139, 92, 246, ' : 'rgba(245, 158, 11, ',
+      alpha: Math.random() * 0.7 + 0.3
+    }));
+
+    function animateCanvas() {
+      if (splash.classList.contains('hide-splash')) return;
+      ctx.clearRect(0, 0, width, height);
+
+      particles.forEach(p => {
+        p.x += p.vx;
+        p.y += p.vy;
+        if (p.x < 0 || p.x > width) p.vx *= -1;
+        if (p.y < 0 || p.y > height) p.vy *= -1;
+
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+        ctx.fillStyle = p.color + p.alpha + ')';
+        ctx.shadowBlur = 12;
+        ctx.shadowColor = p.color + '0.8)';
+        ctx.fill();
+      });
+
+      requestAnimationFrame(animateCanvas);
+    }
+    animateCanvas();
+  }
+
+  // ── 2. Dynamic Equalizer Bar Bounce ──
+  const visualizer = document.querySelector('.splash-visualizer');
+  if (visualizer) {
+    visualizer.innerHTML = '';
+    const barCount = 20;
+    const bars = [];
+    for (let i = 0; i < barCount; i++) {
+      const bar = document.createElement('div');
+      bar.className = 'splash-bar';
+      bar.style.animationDelay = `${(i * 0.08).toFixed(2)}s`;
+      visualizer.appendChild(bar);
+      bars.push(bar);
+    }
+
+    setInterval(() => {
+      if (splash.classList.contains('hide-splash')) return;
+      bars.forEach(bar => {
+        const randH = Math.floor(Math.random() * 38) + 8;
+        bar.style.height = `${randH}px`;
+      });
+    }, 150);
+  }
+
+  // ── 3. Dismiss Splash Screen ──
+  let dismissed = false;
+  const dismissSplash = () => {
+    if (dismissed) return;
+    dismissed = true;
+    splash.classList.add('hide-splash');
+    document.body.style.overflow = '';
+    setTimeout(() => {
+      splash.style.display = 'none';
+    }, 900);
+  };
+
+  // Start progress bar animation
+  if (progressBar) {
+    requestAnimationFrame(() => {
+      progressBar.style.width = '100%';
+    });
+  }
+
+  // Auto transition after 4.5 seconds
+  const timer = setTimeout(dismissSplash, 4500);
+
+  // Manual Enter click
+  if (enterBtn) {
+    enterBtn.addEventListener('click', () => {
+      clearTimeout(timer);
+      dismissSplash();
+    });
+  }
+});
+

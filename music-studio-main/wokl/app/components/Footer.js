@@ -10,7 +10,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="footer-brand">
             <Link href="/" style={{ display: 'inline-flex', alignItems: 'center', gap: 10, textDecoration: 'none' }}>
-              <div style={{ width: 38, height: 38, background: 'linear-gradient(135deg,#8b5cf6,#f59e0b)', borderRadius: 9, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.1rem' }}>🎵</div>
+              <img src="/images/logo.png" alt="Wokl Logo" style={{ height: 36, width: 'auto', objectFit: 'contain' }} />
               <div style={{ lineHeight: 1.1 }}>
                 <div style={{ fontFamily: 'var(--font-heading)', fontSize: '1.2rem', fontWeight: 800, color: 'var(--text-primary)' }}>Wokl</div>
                 <div style={{ fontFamily: 'var(--font-heading)', fontSize: '0.6rem', fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--accent-gold)' }}>Music Studio</div>

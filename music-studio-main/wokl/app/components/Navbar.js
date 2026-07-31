@@ -43,7 +43,7 @@ export default function Navbar() {
         <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
           {/* Logo */}
           <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: 10, textDecoration: 'none' }}>
-            <div style={{ width: 40, height: 40, background: 'linear-gradient(135deg,#8b5cf6,#f59e0b)', borderRadius: 10, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.2rem', flexShrink: 0 }}>🎵</div>
+            <img src="/images/logo.png" alt="Wokl Logo" style={{ height: 38, width: 'auto', objectFit: 'contain' }} />
             <div style={{ lineHeight: 1.1 }}>
               <div style={{ fontFamily: 'var(--font-heading)', fontSize: '1.28rem', fontWeight: 800, color: 'var(--text-primary)', letterSpacing: '-0.01em' }}>Wokl</div>
               <div style={{ fontFamily: 'var(--font-heading)', fontSize: '0.62rem', fontWeight: 600, letterSpacing: '0.13em', textTransform: 'uppercase', color: 'var(--accent-gold)' }}>Music Studio</div>

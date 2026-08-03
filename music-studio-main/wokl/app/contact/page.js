@@ -6,7 +6,7 @@ import Footer from '../components/Footer'
 const WA_BASE = 'https://wa.me/919876543210?text='
 
 const contactInfo = [
-  { icon: '📍', label: 'Address', value: '42, Creative Hub Lane, Bandra West, Mumbai - 400050, India' },
+  { icon: '📍', label: 'Address', value: 'Studio Address, Jaipur, Rajasthan, India' },
   { icon: '📱', label: 'WhatsApp / Phone', value: '+91 8102064727' },
   { icon: '✉️', label: 'Email', value: 'hello@woklstudio.com' },
   { icon: '🕐', label: 'Studio Hours', value: 'Mon – Sat: 9:00 AM – 10:00 PM\nSunday: 10:00 AM – 8:00 PM' },

@@ -43,7 +43,7 @@ export default function Footer() {
           {/* Contact */}
           <div className="footer-col">
             <h4>Get In Touch</h4>
-            <div className="footer-contact-item"><span>📍</span><span>Wokl Music Studio, Your City, India</span></div>
+            <div className="footer-contact-item"><span>📍</span><span>Studio Address, Jaipur, Rajasthan, India</span></div>
             <div className="footer-contact-item"><span>📱</span><span>+91 8102064727</span></div>
             <div className="footer-contact-item"><span>✉️</span><span>hello@woklstudio.com</span></div>
             <a href={WA_URL} target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp" style={{ marginTop: 18, padding: '10px 20px', fontSize: '0.83rem' }}>

@@ -7,7 +7,7 @@ const WA_BASE = 'https://wa.me/919876543210?text='
 
 const contactInfo = [
   { icon: '📍', label: 'Address', value: '42, Creative Hub Lane, Bandra West, Mumbai - 400050, India' },
-  { icon: '📱', label: 'WhatsApp / Phone', value: '+91 98765 43210' },
+  { icon: '📱', label: 'WhatsApp / Phone', value: '+91 8102064727' },
   { icon: '✉️', label: 'Email', value: 'hello@woklstudio.com' },
   { icon: '🕐', label: 'Studio Hours', value: 'Mon – Sat: 9:00 AM – 10:00 PM\nSunday: 10:00 AM – 8:00 PM' },
 ]
@@ -82,7 +82,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <label style={{ display: 'block', fontFamily: 'var(--font-heading)', fontSize: '0.8rem', fontWeight: 600, color: 'var(--text-muted)', letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: 8 }}>WhatsApp Number *</label>
-                  <input name="phone" value={form.phone} onChange={handleChange} required placeholder="+91 98765 43210" style={{ width: '100%', padding: '13px 16px', background: 'var(--bg-card)', border: '1px solid var(--border-subtle)', borderRadius: 12, color: 'var(--text-primary)', fontFamily: 'var(--font-body)', fontSize: '0.93rem', outline: 'none', transition: 'border-color 0.25s' }} onFocus={e => e.target.style.borderColor = 'rgba(139,92,246,0.5)'} onBlur={e => e.target.style.borderColor = 'var(--border-subtle)'} />
+                  <input name="phone" value={form.phone} onChange={handleChange} required placeholder="+91 8102064727" style={{ width: '100%', padding: '13px 16px', background: 'var(--bg-card)', border: '1px solid var(--border-subtle)', borderRadius: 12, color: 'var(--text-primary)', fontFamily: 'var(--font-body)', fontSize: '0.93rem', outline: 'none', transition: 'border-color 0.25s' }} onFocus={e => e.target.style.borderColor = 'rgba(139,92,246,0.5)'} onBlur={e => e.target.style.borderColor = 'var(--border-subtle)'} />
                 </div>
               </div>
               <div>

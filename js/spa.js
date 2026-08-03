@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <div class="grid-3 fade-in" id="catalog-grid">
             ${filtered.map(inst => `
               <div class="card card-hover" style="padding: 0; display: flex; flex-direction: column;">
-                <div style="position: relative; width: 100%; height: 240px; overflow: hidden;">
+                <div style="position: relative; width: 100%; height: 240px; overflow: hidden; border-radius: 24px 24px 0 0;">
                   <img src="${inst.image}" alt="${inst.name}" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;" class="inst-card-img" />
                   <div style="position: absolute; top: 16px; right: 16px; background: rgba(7,7,15,0.85); backdrop-filter: blur(4px); padding: 6px 12px; border-radius: 8px; font-family: var(--font-heading); font-weight: 700; font-size: 0.9rem; color: var(--accent-gold);">
                     ₹${inst.price}/${inst.priceUnit}
@@ -172,7 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="grid-3">
               ${related.map(inst => `
                 <div class="card card-hover" style="padding: 0; display: flex; flex-direction: column;">
-                  <div style="position: relative; width: 100%; height: 200px; overflow: hidden;">
+                  <div style="position: relative; width: 100%; height: 200px; overflow: hidden; border-radius: 24px 24px 0 0;">
                     <img src="${inst.image}" alt="${inst.name}" style="width: 100%; height: 100%; object-fit: cover;" class="inst-card-img" />
                     <div style="position: absolute; top: 16px; right: 16px; background: rgba(7,7,15,0.85); backdrop-filter: blur(4px); padding: 4px 10px; border-radius: 6px; font-family: var(--font-heading); font-weight: 700; font-size: 0.8rem; color: var(--accent-gold);">
                       ₹${inst.price}/${inst.priceUnit}

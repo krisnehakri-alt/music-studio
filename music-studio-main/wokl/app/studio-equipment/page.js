@@ -37,7 +37,7 @@ export default function StudioEquipmentPage() {
       showToast(`Successfully initiated rental for ${name}! Please check WhatsApp.`)
       // Open WhatsApp
       const msg = `Hi Wokl! I'd like to rent the ${name}.`
-      window.open(`https://wa.me/919876543210?text=${encodeURIComponent(msg)}`, '_blank')
+      window.open(`https://wa.me/918102064727?text=${encodeURIComponent(msg)}`, '_blank')
     }, 800)
   }
 

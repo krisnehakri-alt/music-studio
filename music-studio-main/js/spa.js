@@ -241,7 +241,7 @@ document.addEventListener('DOMContentLoaded', () => {
           
           // Open WhatsApp
           const msg = `Hi Wokl! I'd like to rent the ${instName}.`;
-          window.open(`https://wa.me/919876543210?text=${encodeURIComponent(msg)}`, '_blank');
+          window.open(`https://wa.me/918102064727?text=${encodeURIComponent(msg)}`, '_blank');
         }, 800);
       });
     });

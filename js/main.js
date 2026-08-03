@@ -2,7 +2,7 @@
 //  WOKL MUSIC STUDIO — Main JavaScript
 // ============================================
 
-const WHATSAPP_NUMBER = '919876543210'; // Update with real number
+const WHATSAPP_NUMBER = '918102064727';
 const WHATSAPP_MESSAGE = encodeURIComponent(
   "Hi Wokl Music Studio! 👋 I'd like to enquire about your studio services and availability. Please get back to me. Thank you!"
 );

@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
-const WA_NUMBER = '919876543210'
+const WA_NUMBER = '918102064727'
 const WA_MSG = encodeURIComponent("Hi Wokl Music Studio! 👋 I'd like to enquire about your services and availability.")
 const WA_URL = `https://wa.me/${WA_NUMBER}?text=${WA_MSG}`
 

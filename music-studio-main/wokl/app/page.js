@@ -4,7 +4,7 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import { instrumentsData } from './data/instruments'
 
-const WA = (msg) => `https://wa.me/919876543210?text=${encodeURIComponent(msg)}`
+const WA = (msg) => `https://wa.me/918102064727?text=${encodeURIComponent(msg)}`
 
 export const metadata = {
   title: 'Wokl Music Studio — Premium Recording & Creative Studio',

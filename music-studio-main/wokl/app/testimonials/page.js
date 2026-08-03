@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 
-const WA = (msg) => `https://wa.me/919876543210?text=${encodeURIComponent(msg)}`
+const WA = (msg) => `https://wa.me/918102064727?text=${encodeURIComponent(msg)}`
 
 export const metadata = {
   title: 'Testimonials',

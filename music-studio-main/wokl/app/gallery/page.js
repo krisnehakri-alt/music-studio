@@ -5,7 +5,7 @@ import { useState } from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 
-const WA = `https://wa.me/919876543210?text=${encodeURIComponent("Hi Wokl! I saw your gallery and I'd love to book a session!")}`
+const WA = `https://wa.me/918102064727?text=${encodeURIComponent("Hi Wokl! I saw your gallery and I'd love to book a session!")}`
 
 const galleryItems = [
   { src: '/images/hero_studio.png', alt: 'Studio Interior', tag: 'Studio', span: 'col' },

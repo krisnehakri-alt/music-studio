@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-const WA_URL = `https://wa.me/919876543210?text=${encodeURIComponent("Hi Wokl! I'd like to make an enquiry.")}`
+const WA_URL = `https://wa.me/918102064727?text=${encodeURIComponent("Hi Wokl! I'd like to make an enquiry.")}`
 
 export default function Footer() {
   return (

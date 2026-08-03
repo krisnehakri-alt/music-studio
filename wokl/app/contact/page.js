@@ -3,7 +3,7 @@ import { useState } from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 
-const WA_BASE = 'https://wa.me/919876543210?text='
+const WA_BASE = 'https://wa.me/918102064727?text='
 
 const contactInfo = [
   { icon: '📍', label: 'Address', value: 'Studio Address, Jaipur, Rajasthan, India' },
